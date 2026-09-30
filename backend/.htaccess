@@ -1,0 +1,15 @@
+# Semua request diarahkan ke index.php (API). Folder src/, uploads/, dan config.php
+# tidak pernah bisa diakses langsung dari browser.
+Options -Indexes
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Teruskan header Authorization ke PHP (dibutuhkan untuk Bearer token di Apache + FastCGI)
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    RewriteRule ^index\.php$ - [L]
+    RewriteRule ^ index.php [L]
+</IfModule>

@@ -1,0 +1,10 @@
+{
+  "description": "An e-learning platform designed for schools, enabling admins, teachers, students, curriculum managers, and principals to manage classes, assignments, and performance efficiently.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

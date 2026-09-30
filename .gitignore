@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+backend/config.local.php
+backend/uploads/materials/*
+backend/uploads/submissions/*
+!backend/uploads/materials/.gitkeep
+!backend/uploads/submissions/.gitkeep
+!backend/uploads/materials/seed-*.pdf
